@@ -11,8 +11,8 @@ import io.cucumber.junit.Cucumber;
 		,glue={"com.OrangeHRM.StepDefinitions"}
 		,monochrome=true
 		,strict=true		
-		,plugin= {"pretty","junit:target/Reports/userReport.xml"
-				,"json:target/Reports/userReport.json"
+		,plugin= {"pretty","junit:target/Reports/loginreport.xml"
+				,"json:target/Reports/loginReport.json"
 				,"html:target/Reports"}
 		
 		)

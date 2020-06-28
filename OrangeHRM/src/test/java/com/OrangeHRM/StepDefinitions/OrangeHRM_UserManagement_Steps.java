@@ -78,11 +78,12 @@ public class OrangeHRM_UserManagement_Steps extends BasePage{
 	@When("admin selects user to be deleted from the list of users and click on delete button")
 	public void admin_selects_user_to_be_deleted_from_the_list_of_users_and_click_on_delete_button() throws InterruptedException {
 		userPage=adminPage.clickOnUsers();
-	    userPage.deleteUser(userProp.getProperty("userTobeDeleted"));
+	    userPage.deleteUser(userProp.getProperty("userName"));
 	}
 
 	@Then("selected user should be deleted from the users list")
 	public void selected_user_should_be_deleted_from_the_users_list() {
+		Assert.assertTrue(userPage.verifyUserDeleted(userProp.getProperty("userName")));
 	    
 	}
 
